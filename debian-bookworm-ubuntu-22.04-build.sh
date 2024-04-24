@@ -13,9 +13,6 @@ IMAGE_NAME="rust-builder-$DISTRIBUTION"
 CONTAINER_NAME="$IMAGE_NAME-$(date +%s)"
 IMAGE_EXISTS="$(docker images -q "$IMAGE_NAME" | wc -l)"
 
-echo "$(basename $0): ($SCRIPTPATH, $PROJECTPATH) ($DISTRIBUTION, $NAME, $VERSION, $IMAGE_NAME, $CONTAINER_NAME)"
-exit
-
 cd $SCRIPTPATH
 
 if [[ $IMAGE_EXISTS -eq 0 || ( -n "$1" && "$1" = "rebuild" ) ]]; then
