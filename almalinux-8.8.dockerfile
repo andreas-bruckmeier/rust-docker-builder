@@ -18,4 +18,4 @@ RUN curl -s https://sh.rustup.rs > rustup.rs && bash rustup.rs -y
 
 RUN export PATH=/root/.cargo/bin:$PATH
 
-WORKDIR /app
+WORKDIR /rust
